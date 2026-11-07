@@ -1977,7 +1977,7 @@ function renderMonth(){
  });
  body.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{m.rows.splice(+b.dataset.del,1);renderMonth();saveData()});
  $('empty').classList.add('hide');
- const addBtn=$('addOrderRow');if(addBtn)addBtn.onclick=()=>{m.rows.push(blankOrderRow(localDateISO()));saveData();renderMonth();const el=$('monthBody').querySelector(`input[data-i="${m.rows.length-1}"][data-k="name"]`);if(el){el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>el.focus(),250);}};
+ const addBtn=$('addOrderRow');if(addBtn)addBtn.onclick=()=>{m.rows.push(blankOrderRow(localDateISO()));saveData();renderMonth();const row=$('monthBody').querySelector(`tr:last-child`);const wrap=document.querySelector('#monthView .table-wrap');if(wrap)wrap.scrollLeft=0;if(row){row.scrollIntoView({behavior:'smooth',block:'center'});}};
  renderMonthStats();buildNav();
 }
 function bodyAfterRenderInput(rowIndex){return $('monthBody').querySelector(`input[data-i="${rowIndex}"][data-k="orderDate"]`)}
@@ -2094,3 +2094,33 @@ function exportYear(){let arr=[['Chỉ tiêu',...months.map(m=>'T'+m.month),'T�
 function downloadCsv(rows,name){let csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 init();
 </script></body></html>
+<style id="iphone-order-entry-fixes">
+/* iPhone: các nút Lọc / Bỏ lọc / In phiếu nằm trên cùng một hàng */
+@media screen and (max-width:700px){
+  .filter-controls{
+    display:flex!important;flex-wrap:wrap!important;align-items:flex-end!important;
+    gap:7px!important;
+  }
+  .filter-controls label{flex:1 1 calc(50% - 7px)!important;min-width:0!important}
+  .filter-controls label.filter-wide{flex:1 1 calc(50% - 7px)!important}
+  .filter-controls button.btn{
+    flex:1 1 0!important;width:auto!important;min-width:0!important;
+    height:42px!important;padding:0 5px!important;white-space:nowrap!important;
+    font-size:13px!important;
+  }
+  /* Không để trình duyệt phóng to màn hình khi chạm ô nhập */
+  input,select,textarea,button{font-size:16px!important}
+  .filter-controls input{font-size:16px!important;height:42px!important}
+  /* Bảng giữ dạng Excel, có thể vuốt ngang; không khóa chiều cao */
+  #monthView .table-wrap{
+    height:auto!important;max-height:none!important;overflow-x:auto!important;
+    overflow-y:visible!important;-webkit-overflow-scrolling:touch!important;
+  }
+  #monthView #monthTable{min-width:1320px!important}
+  #monthView #monthTable tbody td input,
+  #monthView #monthTable tbody td select{font-size:16px!important}
+  .mobile-order-actions{display:block!important}
+  .mobile-order-actions button{width:100%;min-height:48px;font-size:16px!important}
+  body{zoom:1!important}
+}
+</style>
