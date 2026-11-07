@@ -1960,7 +1960,24 @@ function renderMonth(){
  dl.innerHTML=catalogProducts.map(p=>`<option value="${esc(p.name)}">`).join('');
  body.querySelectorAll('input').forEach(inp=>{
   inp.onchange=()=>updateRow(+inp.dataset.i,inp.dataset.k,inp.value);
-  inp.onkeydown=e=>{
+  if(inp.dataset.k==='name'){
+   inp.removeAttribute('list');
+   inp.setAttribute('autocomplete','off');
+   inp.setAttribute('autocapitalize','off');
+   inp.setAttribute('spellcheck','false');
+   inp.oninput=()=>showProductChoices(inp);
+   inp.onfocus=()=>showProductChoices(inp);
+   inp.onblur=()=>setTimeout(()=>hideProductChoices(),180);
+   inp.onkeydown=e=>{
+    if(e.key==='Enter'){
+     e.preventDefault();
+     const exact=catalogProducts.find(p=>filterText(p.name)===filterText(inp.value));
+     if(exact)chooseProductForRow(+inp.dataset.i,exact);
+     else {const first=document.querySelector('#productChoices button');if(first)first.click();}
+    }
+   };
+  }
+  inp.onkeydown=inp.onkeydown||((e)=>{
    if(e.key==='ArrowDown' && +inp.dataset.i===months[current].rows.length-1){
     e.preventDefault();
     const rowIndex=+inp.dataset.i, key=inp.dataset.k, row=months[current].rows[rowIndex];
@@ -1973,12 +1990,36 @@ function renderMonth(){
     const target=bodyAfterRenderInput(rowIndex+1);
     if(target)target.focus();
    }
-  };
+  });
  });
  body.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{m.rows.splice(+b.dataset.del,1);renderMonth();saveData()});
  $('empty').classList.add('hide');
  const addBtn=$('addOrderRow');if(addBtn)addBtn.onclick=()=>{m.rows.push(blankOrderRow(localDateISO()));saveData();renderMonth();const row=$('monthBody').querySelector(`tr:last-child`);const wrap=document.querySelector('#monthView .table-wrap');if(wrap)wrap.scrollLeft=0;if(row){row.scrollIntoView({behavior:'smooth',block:'center'});}};
  renderMonthStats();buildNav();
+}
+
+function hideProductChoices(){const el=document.getElementById('productChoices');if(el)el.remove();}
+function showProductChoices(inp){
+ hideProductChoices();
+ const q=filterText(inp.value||'');
+ const matches=catalogProducts.filter(p=>!q||filterText((p.name||'')+' '+(p.code||'')).includes(q)).slice(0,30);
+ if(!matches.length)return;
+ const box=document.createElement('div');box.id='productChoices';
+ box.style.cssText='position:fixed;z-index:999999;background:#fff;border:1px solid #9aaac0;border-radius:9px;box-shadow:0 8px 24px #172b4d30;max-height:45vh;overflow:auto;-webkit-overflow-scrolling:touch;';
+ const r=inp.getBoundingClientRect();box.style.left=Math.max(8,Math.min(r.left,window.innerWidth-300))+'px';box.style.top=Math.min(r.bottom,window.innerHeight-120)+'px';box.style.width=Math.min(Math.max(r.width,260),window.innerWidth-16)+'px';
+ box.innerHTML=matches.map((p,i)=>`<button type="button" data-product-index="${catalogProducts.indexOf(p)}" style="display:block;width:100%;padding:11px 12px;text-align:left;border:0;border-bottom:1px solid #edf0f4;background:#fff;color:#25364a;font-size:16px;line-height:1.35;white-space:normal"><strong>${esc(p.name||'')}</strong><br><small style="color:#64748b">Mã: ${esc(p.code||'')} · ${esc(p.unit||'')} · ${money(p.price||0)}</small></button>`).join('');
+ box.querySelectorAll('button').forEach(b=>b.onpointerdown=e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);});
+ document.body.appendChild(box);
+}
+function chooseProductForRow(rowIndex,p){
+ if(!p)return;
+ const row=months[current].rows[rowIndex];if(!row)return;
+ row.name=p.name||'';row.code=p.code||'';row.unit=p.unit||'';row.price=Number(p.price)||0;row.capacity=Number(p.capacity)||0;
+ hideProductChoices();
+ if(rowIndex===months[current].rows.length-1)months[current].rows.push(blankOrderRow(localDateISO()));
+ saveData();renderMonth();
+ const next=bodyAfterRenderInput(rowIndex+1);
+ if(next){next.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>next.focus(),220);}
 }
 function bodyAfterRenderInput(rowIndex){return $('monthBody').querySelector(`input[data-i="${rowIndex}"][data-k="orderDate"]`)}
 function updateRow(i,k,v){let r=months[current].rows[i];r[k]=['support','qty','price','capacity'].includes(k)?parseOrderNumber(v,k):v;if(k==='name'){let p=catalogProducts.find(x=>x.name===v);if(p){r.code=p.code;r.unit=p.unit;r.price=p.price;r.capacity=p.capacity}}saveData();renderMonth()}
@@ -2095,32 +2136,28 @@ function downloadCsv(rows,name){let csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String
 init();
 </script></body></html>
 <style id="iphone-order-entry-fixes">
-/* iPhone: các nút Lọc / Bỏ lọc / In phiếu nằm trên cùng một hàng */
 @media screen and (max-width:700px){
-  .filter-controls{
-    display:flex!important;flex-wrap:wrap!important;align-items:flex-end!important;
-    gap:7px!important;
-  }
-  .filter-controls label{flex:1 1 calc(50% - 7px)!important;min-width:0!important}
-  .filter-controls label.filter-wide{flex:1 1 calc(50% - 7px)!important}
-  .filter-controls button.btn{
-    flex:1 1 0!important;width:auto!important;min-width:0!important;
-    height:42px!important;padding:0 5px!important;white-space:nowrap!important;
-    font-size:13px!important;
-  }
-  /* Không để trình duyệt phóng to màn hình khi chạm ô nhập */
-  input,select,textarea,button{font-size:16px!important}
-  .filter-controls input{font-size:16px!important;height:42px!important}
-  /* Bảng giữ dạng Excel, có thể vuốt ngang; không khóa chiều cao */
-  #monthView .table-wrap{
-    height:auto!important;max-height:none!important;overflow-x:auto!important;
-    overflow-y:visible!important;-webkit-overflow-scrolling:touch!important;
-  }
-  #monthView #monthTable{min-width:1320px!important}
-  #monthView #monthTable tbody td input,
-  #monthView #monthTable tbody td select{font-size:16px!important}
-  .mobile-order-actions{display:block!important}
-  .mobile-order-actions button{width:100%;min-height:48px;font-size:16px!important}
-  body{zoom:1!important}
+ .order-filter .filter-controls{
+   display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;
+   gap:7px!important;align-items:end!important;
+ }
+ .order-filter .filter-controls>label{min-width:0!important;width:auto!important;grid-column:span 2!important}
+ .order-filter .filter-controls>label.filter-wide{grid-column:span 2!important}
+ .order-filter #applyFilter,.order-filter #clearFilter,.order-filter #print{
+   display:flex!important;grid-column:span 1!important;width:100%!important;min-width:0!important;
+   height:43px!important;min-height:43px!important;padding:0 3px!important;
+   align-items:center!important;justify-content:center!important;white-space:nowrap!important;
+   font-size:13px!important;margin:0!important;
+ }
+ .order-filter .backup-actions{grid-column:1/-1!important;width:100%!important}
+ .order-filter .backup-actions .btn{min-height:42px!important}
+ html,body{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+ input,select,textarea{font-size:16px!important;max-font-size:16px}
+ #monthView #monthTable tbody td input[data-k="name"]{
+   font-size:16px!important;transform:none!important;touch-action:manipulation;
+   -webkit-text-size-adjust:100%!important;
+ }
+ #monthView .table-wrap{height:auto!important;max-height:none!important;overflow-x:auto!important;overflow-y:visible!important;-webkit-overflow-scrolling:touch!important}
+ #monthView #monthTable{min-width:1320px!important}
 }
 </style>
