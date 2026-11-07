@@ -1891,14 +1891,34 @@ function buildNav(){
  if(kpis){
    kpis.classList.add('nav-kpis');
    kpis.style.display=(annual||catalogViewActive)?'none':'grid';
-   n.insertAdjacentElement('afterend',kpis);
+   /* PC giữ nguyên: KPI nằm trong thanh menu; chỉ iPhone mới đưa KPI xuống dưới menu */
+   if(window.matchMedia && window.matchMedia('(max-width:700px)').matches){
+     n.insertAdjacentElement('afterend',kpis);
+   }else{
+     n.appendChild(kpis);
+   }
  }
  if(printBtn){
    printBtn.classList.remove('nav-print');
    printBtn.style.display=(annual||catalogViewActive)?'none':'inline-flex';
    const clearBtn=$('clearFilter');
    if(clearBtn&&clearBtn.parentElement)clearBtn.parentElement.insertBefore(printBtn,clearBtn.nextSibling);
-   printBtn.onclick=(e)=>{e.preventDefault();try{window.focus();window.print();}catch(err){alert('Thiết bị chưa hỗ trợ in trực tiếp. Hãy mở trang bằng Safari rồi chọn Chia sẻ → In.');}};
+   /* Dùng lại chức năng in gốc đã hoạt động ở bản cũ: in trực tiếp trang hiện tại */
+   printBtn.onclick=()=>window.print();
+ }
+}
+/* Máy tính: giữ 3 ô chỉ tiêu trên cùng thanh menu như giao diện cũ */
+@media screen and (min-width:701px){
+ .nav .month-kpis.nav-kpis{display:flex!important;flex:1 1 0!important;min-width:0!important}
+ #nav + .month-kpis.nav-kpis{display:none!important}
+}
+</style></body></html>');
+      popup.document.close();
+    }else{
+      try{window.focus();window.print();}
+      catch(err){alert('Trình duyệt hiện tại không hỗ trợ in. Hãy mở phần mềm bằng Safari, nhấn In phiếu rồi chọn Chia sẻ → In.');}
+    }
+   };
  }
  $('monthSelect').value=current;$('monthSelect').onchange=e=>{current=+e.target.value;showMonth()};
  $('yearSelect').onchange=e=>switchYear(+e.target.value);
