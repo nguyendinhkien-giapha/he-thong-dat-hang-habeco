@@ -1957,7 +1957,7 @@ function renderMonth(){
  });
  visibleRows.forEach(({r,i})=>{
   let tr=document.createElement('tr');
-  tr.innerHTML=`<td class="center" data-label="Số TT">${i+1}</td><td data-label="Ngày đặt hàng"><input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" autocomplete="off" data-i="${i}" data-k="orderDate" value="${displayDateVN(r.orderDate||'')}" aria-label="Ngày đặt hàng"></td><td data-label="Tên sản phẩm"><input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-i="${i}" data-k="name" value="${esc(r.name)}" placeholder="Nhập hoặc chọn sản phẩm"></td><td data-label="Mã sản phẩm"><input data-i="${i}" data-k="code" value="${esc(r.code)}"></td><td data-label="Dung tích (L)"><input type="number" step="0.01" data-i="${i}" data-k="capacity" value="${r.capacity||0}"></td><td data-label="Đơn vị"><input data-i="${i}" data-k="unit" value="${esc(r.unit)}"></td><td data-label="Hàng hỗ trợ"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="support" value="${r.support?fmt(r.support):''}" placeholder=""></td><td data-label="Hàng mua"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="qty" value="${r.qty?fmt(r.qty):''}" placeholder=""></td><td data-label="Đơn giá"><input type="text" inputmode="numeric" data-i="${i}" data-k="price" value="${fmt(r.price||0)}"></td><td class="num" data-label="Thành tiền">${money((+r.qty||0)*(+r.price||0))}</td><td class="num" data-label="Tổng quy lít">${fmt((+r.qty||0)*(+r.capacity||0))}</td><td data-label="Ghi chú"><input data-i="${i}" data-k="note" value="${esc(r.note||'')}"></td><td><button class="btn" data-del="${i}" title="Xóa dòng">✕</button></td>`;
+  tr.innerHTML=`<td class="center" data-label="Số TT">${i+1}</td><td data-label="Ngày đặt hàng"><input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" autocomplete="off" data-i="${i}" data-k="orderDate" value="${displayDateVN(r.orderDate||'')}" aria-label="Ngày đặt hàng"></td><td data-label="Tên sản phẩm"><input type="text" readonly inputmode="none" autocomplete="off" autocapitalize="off" spellcheck="false" data-i="${i}" data-k="name" value="${esc(r.name)}" placeholder="Nhập hoặc chọn sản phẩm"></td><td data-label="Mã sản phẩm"><input data-i="${i}" data-k="code" value="${esc(r.code)}"></td><td data-label="Dung tích (L)"><input type="number" step="0.01" data-i="${i}" data-k="capacity" value="${r.capacity||0}"></td><td data-label="Đơn vị"><input data-i="${i}" data-k="unit" value="${esc(r.unit)}"></td><td data-label="Hàng hỗ trợ"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="support" value="${r.support?fmt(r.support):''}" placeholder=""></td><td data-label="Hàng mua"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="qty" value="${r.qty?fmt(r.qty):''}" placeholder=""></td><td data-label="Đơn giá"><input type="text" inputmode="numeric" data-i="${i}" data-k="price" value="${fmt(r.price||0)}"></td><td class="num" data-label="Thành tiền">${money((+r.qty||0)*(+r.price||0))}</td><td class="num" data-label="Tổng quy lít">${fmt((+r.qty||0)*(+r.capacity||0))}</td><td data-label="Ghi chú"><input data-i="${i}" data-k="note" value="${esc(r.note||'')}"></td><td><button class="btn" data-del="${i}" title="Xóa dòng">✕</button></td>`;
   body.appendChild(tr);
  });
  $('filterCount').textContent=(monthFilters.dateFrom||monthFilters.dateTo||monthFilters.product||monthFilters.code)?`Đang hiển thị ${visibleRows.length}/${m.rows.length} dòng`:`Hiển thị tất cả ${m.rows.length} dòng`;
@@ -1974,17 +1974,12 @@ function renderMonth(){
    inp.setAttribute('autocomplete','off');
    inp.setAttribute('autocapitalize','off');
    inp.setAttribute('spellcheck','false');
-   inp.oninput=()=>showProductChoices(inp);
+   inp.readOnly=true;
+   inp.setAttribute('inputmode','none');
+   inp.onclick=()=>showProductChoices(inp);
    inp.onfocus=()=>showProductChoices(inp);
-   inp.onblur=()=>setTimeout(()=>hideProductChoices(),180);
-   inp.onkeydown=e=>{
-    if(e.key==='Enter'){
-     e.preventDefault();
-     const exact=catalogProducts.find(p=>filterText(p.name)===filterText(inp.value));
-     if(exact)chooseProductForRow(+inp.dataset.i,exact);
-     else {const first=document.querySelector('#productChoices button');if(first)first.click();}
-    }
-   };
+   inp.onblur=()=>setTimeout(()=>{if(!document.getElementById('productChoices')?.matches(':hover'))hideProductChoices();},350);
+
   }
   inp.onkeydown=inp.onkeydown||((e)=>{
    if(e.key==='ArrowDown' && +inp.dataset.i===months[current].rows.length-1){
@@ -2014,11 +2009,11 @@ function showProductChoices(inp){
  const matches=catalogProducts.filter(p=>!q||filterText((p.name||'')+' '+(p.code||'')).includes(q));
  if(!matches.length)return;
  const box=document.createElement('div');box.id='productChoices';
- box.style.cssText='position:fixed;z-index:999999;background:#fff;border:1px solid #9aaac0;border-radius:9px;box-shadow:0 8px 24px #172b4d30;max-height:45vh;overflow:auto;-webkit-overflow-scrolling:touch;';
+ box.style.cssText='position:fixed;z-index:2147483647;background:#fff;border:1px solid #9aaac0;border-radius:10px;box-shadow:0 8px 24px #172b4d30;height:min(62vh,560px);max-height:62vh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;';
  const r=inp.getBoundingClientRect();box.style.left=Math.max(8,Math.min(r.left,window.innerWidth-300))+'px';box.style.top=Math.min(r.bottom,window.innerHeight-120)+'px';box.style.width=Math.min(Math.max(r.width,260),window.innerWidth-16)+'px';
  box.innerHTML=matches.map((p,i)=>`<button type="button" data-product-index="${catalogProducts.indexOf(p)}" style="display:block;width:100%;padding:11px 12px;text-align:left;border:0;border-bottom:1px solid #edf0f4;background:#fff;color:#25364a;font-size:16px;line-height:1.35;white-space:normal"><strong>${esc(p.name||'')}</strong><br><small style="color:#64748b">Mã: ${esc(p.code||'')} · ${esc(p.unit||'')} · ${money(p.price||0)}</small></button>`).join('');
  box.querySelectorAll('button').forEach(b=>{
-  b.addEventListener('pointerdown',e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);},{passive:false});
+  b.addEventListener('click',e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);});
  });
  document.body.appendChild(box);
 }
@@ -2145,7 +2140,23 @@ function exportMonth(){let m=months[current];let arr=[['Số TT','Ngày đặt h
 function exportYear(){let arr=[['Chỉ tiêu',...months.map(m=>'T'+m.month),'Tổng năm'],['Kế hoạch (Lít)',...months.map(m=>m.plan),months.reduce((a,m)=>a+(+m.plan||0),0)],['Thực hiện (Lít)',...months.map(m=>m.rows.reduce((a,r)=>a+(+r.qty||0)*(+r.capacity||0),0)),months.reduce((a,m)=>a+m.rows.reduce((x,r)=>x+(+r.qty||0)*(+r.capacity||0),0),0)]];downloadCsv(arr,`Tong_hop_ke_hoach_thuc_hien_${currentYear}.csv`)}
 function downloadCsv(rows,name){let csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 init();
-</script></body></html>
+</script><style id="iphone-v8-date-picker">
+@media screen and (max-width:700px){
+ #monthView #monthTable{min-width:1180px!important;table-layout:fixed!important}
+ #monthView #monthTable thead th:nth-child(1),#monthView #monthTable tbody td:nth-child(1){width:48px!important;min-width:48px!important}
+ #monthView #monthTable thead th:nth-child(2),#monthView #monthTable tbody td:nth-child(2){width:105px!important;min-width:105px!important;max-width:105px!important}
+ #monthView #monthTable tbody td:nth-child(2) input[data-k="orderDate"]{
+  width:100%!important;min-width:0!important;max-width:100%!important;padding:4px 5px!important;
+  text-align:center!important;font-size:14px!important;white-space:nowrap!important;
+ }
+ #monthView #monthTable thead th:nth-child(3),#monthView #monthTable tbody td:nth-child(3){width:250px!important;min-width:250px!important}
+ #monthView #monthTable tbody td:nth-child(3) input[data-k="name"]{
+  width:100%!important;min-width:0!important;font-size:16px!important;
+ }
+ #productChoices{left:8px!important;right:8px!important;width:auto!important;top:12vh!important;height:62vh!important;max-height:62vh!important}
+ #productChoices button{min-height:64px!important;padding:12px 14px!important;font-size:16px!important}
+}
+</style></body></html>
 <style id="iphone-v7-final">
 @media screen and (max-width:700px){
  #orderFilter .filter-controls{
