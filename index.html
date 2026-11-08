@@ -2222,25 +2222,35 @@ button,a,select,input,textarea{touch-action:manipulation}
 </style>
 
 
-<style id="v17-mobile-compact-columns">
-@media (max-width:800px){
-  /* Thu gọn cột tên sản phẩm trên điện thoại */
-  #monthView #monthTable th:nth-child(3),
-  #monthView #monthTable td:nth-child(3){
-    width:230px!important;
-    min-width:230px!important;
-    max-width:230px!important;
+<style id="v18-mobile-hide-columns-final">
+/* V18: chỉ ẩn các cột này trên màn hình điện thoại; dữ liệu và phép tính vẫn giữ nguyên */
+@media screen and (max-width: 800px) {
+  #monthView #monthTable thead th:nth-child(5),
+  #monthView #monthTable tbody td:nth-child(5),
+  #monthView #monthTable thead th:nth-child(7),
+  #monthView #monthTable tbody td:nth-child(7),
+  #monthView #monthTable thead th:nth-child(11),
+  #monthView #monthTable tbody td:nth-child(11),
+  #monthView #monthTable thead th:nth-child(12),
+  #monthView #monthTable tbody td:nth-child(12),
+  #monthView #monthTable tbody td[data-label="Dung tích (L)"],
+  #monthView #monthTable tbody td[data-label="Hàng hỗ trợ"],
+  #monthView #monthTable tbody td[data-label="Tổng quy lít"],
+  #monthView #monthTable tbody td[data-label="Ghi chú"] {
+    display: none !important;
+    width: 0 !important;
+    min-width: 0 !important;
+    max-width: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
   }
-  /* Ẩn các cột không cần xem trên màn hình điện thoại */
-  #monthView #monthTable th:nth-child(5),
-  #monthView #monthTable td:nth-child(5),
-  #monthView #monthTable th:nth-child(7),
-  #monthView #monthTable td:nth-child(7),
-  #monthView #monthTable th:nth-child(11),
-  #monthView #monthTable td:nth-child(11),
-  #monthView #monthTable th:nth-child(12),
-  #monthView #monthTable td:nth-child(12){
-    display:none!important;
+
+  /* Thu hẹp nhẹ cột tên sản phẩm, vẫn đủ đọc và chọn */
+  #monthView #monthTable thead th:nth-child(3),
+  #monthView #monthTable tbody td:nth-child(3) {
+    width: 220px !important;
+    min-width: 220px !important;
+    max-width: 220px !important;
   }
 }
 </style>
