@@ -2854,3 +2854,64 @@ init();
 }
 
 </style>
+
+<style id="pc-screen-fit-v21">
+/* PC: thu gọn chiều cao để phần đặt hàng và tổng kết hiển thị trọn hơn; không thay đổi bố cục iPhone */
+@media screen and (min-width:801px){
+  .hero{padding:8px 20px!important;gap:14px!important;border-bottom-width:3px!important}
+  .hero img{width:112px!important;height:88px!important}
+  .hero h1{font-size:25px!important}
+  .hero p{margin-top:5px!important;font-size:15px!important}
+  #nav.nav{padding:6px 12px!important;gap:8px!important}
+  #nav.nav>button{padding:9px 13px!important;min-height:66px!important}
+  #nav.nav>.nav-field select{height:36px!important}
+  #nav.nav .nav-kpis .kpi{padding:4px 8px!important}
+  #nav.nav .nav-kpis .kpi input{height:27px!important}
+  #nav.nav .nav-kpis .kpi strong{font-size:16px!important}
+  main{padding:10px 14px!important}
+  .panel{padding:10px!important;margin-bottom:9px!important}
+  #orderFilter{padding:9px 12px!important}
+  #orderFilter .filter-controls{gap:7px!important}
+  #orderFilter .filter-controls input,#orderFilter .filter-controls select{height:36px!important}
+  #orderFilter .filter-controls .btn{min-height:36px!important;padding:8px 12px!important}
+  #monthView .table-wrap{margin-top:6px!important}
+  #monthView #monthTable thead th{padding:6px 6px!important}
+  #monthView #monthTable tbody td{height:30px!important;padding:1px 5px!important}
+  #monthView #monthTable tbody td input,#monthView #monthTable tbody td select{height:25px!important}
+  .order-summary{margin:7px 0 9px!important}
+  .order-summary .stat{padding:6px 10px!important}
+  .order-summary .stat strong{font-size:17px!important;margin-top:2px!important}
+  .foot{padding:7px 10px!important}
+}
+
+/* V22: PC - ket thuc bang sat nut xoa, dong bo mau nhan tong ket */
+@media screen and (min-width: 801px){
+  #monthView > .table-wrap{
+    display: inline-block !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    vertical-align: top !important;
+    overflow-x: auto !important;
+  }
+  #monthView #monthTable{
+    width: max-content !important;
+    min-width: 0 !important;
+    table-layout: auto !important;
+  }
+  #monthView #monthTable th:last-child,
+  #monthView #monthTable td:last-child{
+    width: 64px !important;
+    min-width: 64px !important;
+    max-width: 64px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    text-align: center !important;
+  }
+  #monthView #monthTable td:last-child button{
+    margin: 0 auto !important;
+  }
+}
+.order-summary .stat small{
+  color: #68778d !important;
+}
+</style>
