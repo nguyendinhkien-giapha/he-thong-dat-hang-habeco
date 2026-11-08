@@ -2409,7 +2409,7 @@ button,a,select,input,textarea{touch-action:manipulation}
     </div>
   </div>
 </div>
-<div class="mobile-order-actions"><button class="btn green" id="addOrderRow" type="button">＋ Thêm sản phẩm vào đơn</button></div><div class="table-wrap"><table id="monthTable"><thead><tr><th style="width:55px">Số TT</th><th style="min-width:125px">Ngày đặt hàng</th><th style="min-width:210px">Tên sản phẩm</th><th style="min-width:105px">Mã sản phẩm</th><th>Dung tích (L)</th><th>Đơn vị</th><th>Hàng hỗ trợ</th><th>Hàng mua</th><th>Đơn giá</th><th>Thành tiền</th><th>Tổng quy lít</th><th style="min-width:150px">Ghi chú</th><th class="delete-column">Xóa dòng</th></tr></thead><tbody id="monthBody"></tbody></table><div class="empty hide" id="empty">Chưa có mặt hàng. Nhấn “Thêm dòng” để nhập sản phẩm trực tiếp.</div></div>
+<div class="mobile-order-actions"><button class="btn green" id="addOrderRow" type="button">＋ Thêm sản phẩm vào đơn</button></div><div class="table-wrap"><table id="monthTable"><thead><tr><th style="width:55px">Số TT</th><th style="min-width:125px">Ngày đặt hàng</th><th style="min-width:210px">Tên sản phẩm</th><th style="min-width:105px">Mã sản phẩm</th><th>Dung tích (L)</th><th>Đơn vị</th><th>Hàng hỗ trợ</th><th>Hàng mua</th><th>Đơn giá</th><th>Thành tiền</th><th>Tổng quy lít</th><th style="min-width:150px">Ghi chú</th><th class="delete-column">Xóa</th></tr></thead><tbody id="monthBody"></tbody></table><div class="empty hide" id="empty">Chưa có mặt hàng. Nhấn “Thêm dòng” để nhập sản phẩm trực tiếp.</div></div>
 <div class="stats order-summary"><div class="stat"><small>Số mặt hàng</small><strong id="count">0</strong></div><div class="stat"><small>Tổng két/thùng</small><strong id="qtyTotal">0</strong></div><div class="stat"><small>Tổng quy lít</small><strong id="liters">0</strong></div><div class="stat"><small>Tổng thành tiền</small><strong id="money">0 ₫</strong></div></div>
 </section>
 
@@ -2967,5 +2967,32 @@ init();
 }
 .order-summary .stat small{
   color: #68778d !important;
+}
+</style>
+
+
+<style>
+/* V25: In don hang day du tren A4 ngang */
+@media print {
+  @page { size: A4 landscape; margin: 8mm; }
+  html, body { width: 100% !important; min-width: 0 !important; margin: 0 !important; padding: 0 !important; overflow: visible !important; background: #fff !important; }
+  body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  body * { visibility: visible !important; }
+  #monthView { display: block !important; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  #monthView .hero { display: flex !important; width: 100% !important; padding: 3mm 4mm !important; min-height: 18mm !important; margin: 0 0 3mm !important; break-inside: avoid !important; }
+  #monthView .hero img { width: 18mm !important; height: 16mm !important; }
+  #monthView .hero h1 { font-size: 13pt !important; }
+  #monthView .hero p { font-size: 8pt !important; margin-top: 1mm !important; }
+  #monthView .table-wrap { display: block !important; width: 100% !important; max-width: 100% !important; overflow: visible !important; border: 0 !important; }
+  #monthView #monthTable { display: table !important; width: 100% !important; min-width: 0 !important; max-width: 100% !important; table-layout: fixed !important; border-collapse: collapse !important; font-size: 6.5pt !important; }
+  #monthView #monthTable th, #monthView #monthTable td { min-width: 0 !important; width: auto !important; padding: 2mm 1mm !important; font-size: 6.2pt !important; line-height: 1.15 !important; white-space: normal !important; overflow-wrap: anywhere !important; word-break: break-word !important; }
+  #monthView #monthTable th:last-child, #monthView #monthTable td:last-child { display: none !important; }
+  #monthView #monthTable input, #monthView #monthTable select { display: inline-block !important; width: 100% !important; min-width: 0 !important; border: 0 !important; padding: 0 !important; margin: 0 !important; background: transparent !important; color: #111 !important; font-size: 6pt !important; appearance: none !important; }
+  #monthView .order-summary { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 2mm !important; width: 100% !important; margin-top: 3mm !important; break-inside: avoid !important; }
+  #monthView .order-summary .stat { padding: 2mm !important; box-shadow: none !important; break-inside: avoid !important; }
+  #monthView .order-summary .stat small { font-size: 6.5pt !important; }
+  #monthView .order-summary .stat strong { font-size: 9pt !important; }
+  #monthView .nav, #monthView .toolbar, #monthView .btn, #monthView .order-filter, #monthView .month-actions, #monthView .mobile-order-actions, .foot { display: none !important; }
+  .panel { box-shadow: none !important; }
 }
 </style>
