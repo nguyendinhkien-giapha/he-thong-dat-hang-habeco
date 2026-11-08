@@ -1,6 +1,7 @@
-HABECO OANH SON V23
-- PC: phân bổ chiều rộng bảng kín toàn màn hình, không còn khoảng trống bên phải.
-- Nới rộng các cột Tên sản phẩm, Mã sản phẩm, Hàng hỗ trợ, Hàng mua, Thành tiền, Ghi chú.
-- Đặt tên cột cuối là Xóa dòng.
-- CSS thay đổi chỉ áp dụng màn hình PC (trên 800px); giữ nguyên bố cục mobile và chức năng.
-Mở index.html để chạy cục bộ hoặc tải toàn bộ nội dung lên GitHub Pages để cập nhật website.
+HABECO OANH SON V27
+
+- Sua menu iPhone hien thi du 8 o trong 2 hang x 4 cot.
+- Bao gom Trang chu, Thang, Nam, Danh muc hang, Tong hop, Ke hoach thang, Thuc hien thang, % hoan thanh.
+- Giu nguyen chuc nang va giao dien PC.
+
+Mo index.html de chay truc tiep hoac dua 5 tep trong bo cai len repository GitHub Pages.
