@@ -1,16 +1,18 @@
 {
-  "name": "Hệ thống đặt hàng HABECO – NPP Oanh Sơn",
+  "name": "Đặt hàng HABECO - NPP Oanh Sơn",
   "short_name": "Đặt hàng HABECO",
-  "start_url": "./",
+  "description": "Hệ thống quản lý đặt hàng và theo dõi kế hoạch NPP Oanh Sơn",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#f4f5f7",
   "theme_color": "#8e1b14",
   "icons": [
     {
-      "src": "icon-dat-hang-iphone.png",
-      "sizes": "180x180",
-      "type": "image/png"
+      "src": "./icon-dat-hang-iphone.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
