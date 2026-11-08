@@ -1711,158 +1711,6 @@ section#annualView .stats .stat strong{color:#526f9f!important}
  .backup-actions{display:flex;gap:6px;width:100%}
  .backup-actions .btn{flex:1;min-height:42px;padding:8px 10px;font-size:13px}
 }
-
-
-/* ===== KHOI PHUC THANH MENU GON, DE NHIN THEO BO CUC V8 ===== */
-#nav.nav{
-  display:flex!important;
-  align-items:stretch!important;
-  justify-content:flex-start!important;
-  flex-wrap:nowrap!important;
-  gap:10px!important;
-  width:100%!important;
-  min-height:76px!important;
-  padding:10px 14px!important;
-  overflow-x:auto!important;
-  overflow-y:hidden!important;
-  background:linear-gradient(100deg,#7d2118 0%,#92291f 55%,#7d2118 100%)!important;
-  border-bottom:3px solid #c49a45!important;
-  box-sizing:border-box!important;
-}
-#nav.nav > .nav-field{
-  display:flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  flex:0 0 auto!important;
-  min-width:0!important;
-  min-height:52px!important;
-  padding:7px 12px!important;
-  gap:8px!important;
-  border:1px solid #b96b4a!important;
-  border-radius:10px!important;
-  background:linear-gradient(145deg,#a34a32,#853020)!important;
-  color:#fff!important;
-  white-space:nowrap!important;
-}
-#nav.nav > .nav-field span{
-  color:#ffe5a0!important;
-  font-size:14px!important;
-  font-weight:700!important;
-}
-#nav.nav > .nav-field select{
-  min-width:92px!important;
-  width:auto!important;
-  height:38px!important;
-  padding:5px 9px!important;
-  border:1px solid #d9b77d!important;
-  border-radius:8px!important;
-  background:#fff!important;
-  color:#493326!important;
-  font-size:14px!important;
-  font-weight:700!important;
-}
-#nav.nav > #homeTab,
-#nav.nav > #annualTab,
-#nav.nav > #catalogTab{
-  display:inline-flex!important;
-  align-items:center!important;
-  justify-content:center!important;
-  flex:0 0 auto!important;
-  min-height:52px!important;
-  height:52px!important;
-  padding:10px 17px!important;
-  border:1px solid #b96b4a!important;
-  border-radius:10px!important;
-  background:linear-gradient(145deg,#a34a32,#853020)!important;
-  color:#fff!important;
-  font-size:14px!important;
-  font-weight:700!important;
-  white-space:nowrap!important;
-  cursor:pointer!important;
-}
-#nav.nav > #annualTab.active,
-#nav.nav > #annualTab:hover,
-#nav.nav > #homeTab:hover,
-#nav.nav > #catalogTab.active,
-#nav.nav > #catalogTab:hover{
-  background:linear-gradient(145deg,#f1cc67,#d9a83c)!important;
-  border-color:#e9c46c!important;
-  color:#542b12!important;
-}
-#nav.nav .month-kpis.nav-kpis{
-  flex:1 1 420px!important;
-  min-width:320px!important;
-  display:flex!important;
-  align-items:stretch!important;
-  gap:8px!important;
-  padding:0!important;
-  margin:0!important;
-  border:0!important;
-  background:transparent!important;
-}
-#nav.nav .month-kpis.nav-kpis .kpi{
-  flex:1 1 0!important;
-  min-width:0!important;
-  padding:8px 10px!important;
-  border:1px solid #d7b66f!important;
-  border-radius:10px!important;
-  background:linear-gradient(145deg,#fffaf0,#f4e6c7)!important;
-  box-shadow:0 2px 5px #3d100b22!important;
-}
-#nav.nav .month-kpis.nav-kpis .kpi label{
-  display:block!important;
-  color:#70401f!important;
-  font-size:10px!important;
-  line-height:1.25!important;
-  font-weight:700!important;
-}
-#nav.nav .month-kpis.nav-kpis .kpi strong{
-  display:block!important;
-  color:#a82018!important;
-  font-size:19px!important;
-  line-height:1.25!important;
-}
-#nav.nav .month-kpis.nav-kpis .kpi input{
-  width:100%!important;
-  min-width:0!important;
-  height:30px!important;
-  margin-top:4px!important;
-  font-size:13px!important;
-}
-@media(max-width:700px){
-  #nav.nav{
-    display:grid!important;
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:7px!important;
-    min-height:0!important;
-    padding:9px!important;
-    overflow:visible!important;
-  }
-  #nav.nav > .nav-field,
-  #nav.nav > #homeTab,
-  #nav.nav > #annualTab,
-  #nav.nav > #catalogTab{
-    width:100%!important;
-    min-width:0!important;
-    min-height:46px!important;
-    height:46px!important;
-    padding:6px 8px!important;
-    box-sizing:border-box!important;
-    font-size:12px!important;
-  }
-  #nav.nav > .nav-field span{font-size:12px!important}
-  #nav.nav > .nav-field select{
-    min-width:0!important;
-    width:76px!important;
-    max-width:58%!important;
-    height:34px!important;
-    padding:3px 5px!important;
-    font-size:12px!important;
-  }
-  #nav.nav .month-kpis.nav-kpis{
-    display:none!important;
-  }
-}
 </style><style>
 
 /* DANH MUC HANG - dong bo bang nhap don hang, gon va de doc */
@@ -2040,37 +1888,12 @@ function init(){let saved=localStorage.getItem('oanhson_order_v2');if(saved){try
 function buildNav(){
  let n=$('nav');const kpis=document.querySelector('.month-kpis');const printBtn=document.getElementById('print');
  n.innerHTML=`<button id="homeTab" title="Về trang chủ đặt hàng">⌂ TRANG CHỦ</button><div class="nav-field"><span>Tháng</span><select id="monthSelect">${months.map((m,i)=>`<option value="${i}">${String(i+1).padStart(2,'0')}</option>`).join('')}</select></div><div class="nav-field"><span>Năm</span><select id="yearSelect">${Array.from({length:9},(_,i)=>2024+i).map(y=>`<option value="${y}" ${y===currentYear?'selected':''}>${y}</option>`).join('')}</select></div><button id="annualTab" class="${annual?'active':''}">▦ TỔNG HỢP</button><button id="catalogTab" class="${catalogViewActive?'active':''}">▤ DANH MỤC HÀNG</button>`;
- if(kpis){
-   kpis.classList.add('nav-kpis');
-   kpis.style.display=(annual||catalogViewActive)?'none':'grid';
-   /* PC giữ nguyên: KPI nằm trong thanh menu; chỉ iPhone mới đưa KPI xuống dưới menu */
-   if(window.matchMedia && window.matchMedia('(max-width:700px)').matches){
-     n.insertAdjacentElement('afterend',kpis);
-   }else{
-     n.appendChild(kpis);
-   }
- }
+ if(kpis){kpis.classList.add('nav-kpis');kpis.style.display=(annual||catalogViewActive)?'none':'flex';n.appendChild(kpis);}
  if(printBtn){
    printBtn.classList.remove('nav-print');
    printBtn.style.display=(annual||catalogViewActive)?'none':'inline-flex';
    const clearBtn=$('clearFilter');
    if(clearBtn&&clearBtn.parentElement)clearBtn.parentElement.insertBefore(printBtn,clearBtn.nextSibling);
-   /* Dùng lại chức năng in gốc đã hoạt động ở bản cũ: in trực tiếp trang hiện tại */
-   printBtn.onclick=()=>window.print();
- }
-}
-/* Máy tính: giữ 3 ô chỉ tiêu trên cùng thanh menu như giao diện cũ */
-@media screen and (min-width:701px){
- .nav .month-kpis.nav-kpis{display:flex!important;flex:1 1 0!important;min-width:0!important}
- #nav + .month-kpis.nav-kpis{display:none!important}
-}
-</style></body></html>');
-      popup.document.close();
-    }else{
-      try{window.focus();window.print();}
-      catch(err){alert('Trình duyệt hiện tại không hỗ trợ in. Hãy mở phần mềm bằng Safari, nhấn In phiếu rồi chọn Chia sẻ → In.');}
-    }
-   };
  }
  $('monthSelect').value=current;$('monthSelect').onchange=e=>{current=+e.target.value;showMonth()};
  $('yearSelect').onchange=e=>switchYear(+e.target.value);
@@ -2134,7 +1957,7 @@ function renderMonth(){
  });
  visibleRows.forEach(({r,i})=>{
   let tr=document.createElement('tr');
-  tr.innerHTML=`<td class="center" data-label="Số TT">${i+1}</td><td data-label="Ngày đặt hàng"><input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" autocomplete="off" data-i="${i}" data-k="orderDate" value="${displayDateVN(r.orderDate||'')}" aria-label="Ngày đặt hàng"></td><td data-label="Tên sản phẩm"><input type="text" readonly inputmode="none" autocomplete="off" autocapitalize="off" spellcheck="false" data-i="${i}" data-k="name" value="${esc(r.name)}" placeholder="Nhập hoặc chọn sản phẩm"></td><td data-label="Mã sản phẩm"><input data-i="${i}" data-k="code" value="${esc(r.code)}"></td><td data-label="Dung tích (L)"><input type="number" step="0.01" data-i="${i}" data-k="capacity" value="${r.capacity||0}"></td><td data-label="Đơn vị"><input data-i="${i}" data-k="unit" value="${esc(r.unit)}"></td><td data-label="Hàng hỗ trợ"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="support" value="${r.support?fmt(r.support):''}" placeholder=""></td><td data-label="Hàng mua"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="qty" value="${r.qty?fmt(r.qty):''}" placeholder=""></td><td data-label="Đơn giá"><input type="text" inputmode="numeric" data-i="${i}" data-k="price" value="${fmt(r.price||0)}"></td><td class="num" data-label="Thành tiền">${money((+r.qty||0)*(+r.price||0))}</td><td class="num" data-label="Tổng quy lít">${fmt((+r.qty||0)*(+r.capacity||0))}</td><td data-label="Ghi chú"><input data-i="${i}" data-k="note" value="${esc(r.note||'')}"></td><td><button class="btn" data-del="${i}" title="Xóa dòng">✕</button></td>`;
+  tr.innerHTML=`<td class="center" data-label="Số TT">${i+1}</td><td data-label="Ngày đặt hàng"><input type="text" inputmode="numeric" maxlength="10" placeholder="DD/MM/YYYY" autocomplete="off" data-i="${i}" data-k="orderDate" value="${displayDateVN(r.orderDate||'')}" aria-label="Ngày đặt hàng"></td><td data-label="Tên sản phẩm"><input type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" data-i="${i}" data-k="name" value="${esc(r.name)}" placeholder="Nhập hoặc chọn sản phẩm"></td><td data-label="Mã sản phẩm"><input data-i="${i}" data-k="code" value="${esc(r.code)}"></td><td data-label="Dung tích (L)"><input type="number" step="0.01" data-i="${i}" data-k="capacity" value="${r.capacity||0}"></td><td data-label="Đơn vị"><input data-i="${i}" data-k="unit" value="${esc(r.unit)}"></td><td data-label="Hàng hỗ trợ"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="support" value="${r.support?fmt(r.support):''}" placeholder=""></td><td data-label="Hàng mua"><input type="text" inputmode="numeric" autocomplete="off" data-i="${i}" data-k="qty" value="${r.qty?fmt(r.qty):''}" placeholder=""></td><td data-label="Đơn giá"><input type="text" inputmode="numeric" data-i="${i}" data-k="price" value="${fmt(r.price||0)}"></td><td class="num" data-label="Thành tiền">${money((+r.qty||0)*(+r.price||0))}</td><td class="num" data-label="Tổng quy lít">${fmt((+r.qty||0)*(+r.capacity||0))}</td><td data-label="Ghi chú"><input data-i="${i}" data-k="note" value="${esc(r.note||'')}"></td><td><button class="btn" data-del="${i}" title="Xóa dòng">✕</button></td>`;
   body.appendChild(tr);
  });
  $('filterCount').textContent=(monthFilters.dateFrom||monthFilters.dateTo||monthFilters.product||monthFilters.code)?`Đang hiển thị ${visibleRows.length}/${m.rows.length} dòng`:`Hiển thị tất cả ${m.rows.length} dòng`;
@@ -2151,12 +1974,17 @@ function renderMonth(){
    inp.setAttribute('autocomplete','off');
    inp.setAttribute('autocapitalize','off');
    inp.setAttribute('spellcheck','false');
-   inp.readOnly=true;
-   inp.setAttribute('inputmode','none');
-   inp.onclick=()=>showProductChoices(inp);
+   inp.oninput=()=>showProductChoices(inp);
    inp.onfocus=()=>showProductChoices(inp);
-   inp.onblur=()=>setTimeout(()=>{if(!document.getElementById('productChoices')?.matches(':hover'))hideProductChoices();},350);
-
+   inp.onblur=()=>setTimeout(()=>hideProductChoices(),180);
+   inp.onkeydown=e=>{
+    if(e.key==='Enter'){
+     e.preventDefault();
+     const exact=catalogProducts.find(p=>filterText(p.name)===filterText(inp.value));
+     if(exact)chooseProductForRow(+inp.dataset.i,exact);
+     else {const first=document.querySelector('#productChoices button');if(first)first.click();}
+    }
+   };
   }
   inp.onkeydown=inp.onkeydown||((e)=>{
    if(e.key==='ArrowDown' && +inp.dataset.i===months[current].rows.length-1){
@@ -2186,11 +2014,11 @@ function showProductChoices(inp){
  const matches=catalogProducts.filter(p=>!q||filterText((p.name||'')+' '+(p.code||'')).includes(q));
  if(!matches.length)return;
  const box=document.createElement('div');box.id='productChoices';
- box.style.cssText='position:fixed;z-index:2147483647;background:#fff;border:1px solid #9aaac0;border-radius:10px;box-shadow:0 8px 24px #172b4d30;height:min(62vh,560px);max-height:62vh;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;';
+ box.style.cssText='position:fixed;z-index:999999;background:#fff;border:1px solid #9aaac0;border-radius:9px;box-shadow:0 8px 24px #172b4d30;max-height:45vh;overflow:auto;-webkit-overflow-scrolling:touch;';
  const r=inp.getBoundingClientRect();box.style.left=Math.max(8,Math.min(r.left,window.innerWidth-300))+'px';box.style.top=Math.min(r.bottom,window.innerHeight-120)+'px';box.style.width=Math.min(Math.max(r.width,260),window.innerWidth-16)+'px';
  box.innerHTML=matches.map((p,i)=>`<button type="button" data-product-index="${catalogProducts.indexOf(p)}" style="display:block;width:100%;padding:11px 12px;text-align:left;border:0;border-bottom:1px solid #edf0f4;background:#fff;color:#25364a;font-size:16px;line-height:1.35;white-space:normal"><strong>${esc(p.name||'')}</strong><br><small style="color:#64748b">Mã: ${esc(p.code||'')} · ${esc(p.unit||'')} · ${money(p.price||0)}</small></button>`).join('');
  box.querySelectorAll('button').forEach(b=>{
-  b.addEventListener('click',e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);});
+  b.addEventListener('pointerdown',e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);},{passive:false});
  });
  document.body.appendChild(box);
 }
@@ -2317,50 +2145,7 @@ function exportMonth(){let m=months[current];let arr=[['Số TT','Ngày đặt h
 function exportYear(){let arr=[['Chỉ tiêu',...months.map(m=>'T'+m.month),'Tổng năm'],['Kế hoạch (Lít)',...months.map(m=>m.plan),months.reduce((a,m)=>a+(+m.plan||0),0)],['Thực hiện (Lít)',...months.map(m=>m.rows.reduce((a,r)=>a+(+r.qty||0)*(+r.capacity||0),0)),months.reduce((a,m)=>a+m.rows.reduce((x,r)=>x+(+r.qty||0)*(+r.capacity||0),0),0)]];downloadCsv(arr,`Tong_hop_ke_hoach_thuc_hien_${currentYear}.csv`)}
 function downloadCsv(rows,name){let csv='\ufeff'+rows.map(r=>r.map(v=>'"'+String(v??'').replaceAll('"','""')+'"').join(',')).join('\r\n');let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download=name;a.click();URL.revokeObjectURL(a.href)}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 init();
-</script><style id="iphone-v8-date-picker">
-@media screen and (max-width:700px){
- #monthView #monthTable{min-width:1180px!important;table-layout:fixed!important}
- #monthView #monthTable thead th:nth-child(1),#monthView #monthTable tbody td:nth-child(1){width:48px!important;min-width:48px!important}
- #monthView #monthTable thead th:nth-child(2),#monthView #monthTable tbody td:nth-child(2){width:105px!important;min-width:105px!important;max-width:105px!important}
- #monthView #monthTable tbody td:nth-child(2) input[data-k="orderDate"]{
-  width:100%!important;min-width:0!important;max-width:100%!important;padding:4px 5px!important;
-  text-align:center!important;font-size:14px!important;white-space:nowrap!important;
- }
- #monthView #monthTable thead th:nth-child(3),#monthView #monthTable tbody td:nth-child(3){width:250px!important;min-width:250px!important}
- #monthView #monthTable tbody td:nth-child(3) input[data-k="name"]{
-  width:100%!important;min-width:0!important;font-size:16px!important;
- }
- #productChoices{left:8px!important;right:8px!important;width:auto!important;top:12vh!important;height:62vh!important;max-height:62vh!important}
- #productChoices button{min-height:64px!important;padding:12px 14px!important;font-size:16px!important}
-}
-</style><style id="iphone-v9-kpi-print-fix">
-/* KPI tháng nằm thành một dải riêng dưới menu, không bị ép vào thanh điều hướng */
-.month-kpis.nav-kpis{
- display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
- width:100%!important;max-width:100%!important;box-sizing:border-box!important;
- gap:7px!important;margin:8px 0 12px!important;padding:0 10px!important;
- order:initial!important;flex:none!important;overflow:visible!important;
-}
-.month-kpis.nav-kpis .kpi{
- display:flex!important;flex-direction:column!important;justify-content:center!important;
- align-items:stretch!important;min-width:0!important;width:auto!important;
- padding:9px 8px!important;border-radius:9px!important;box-sizing:border-box!important;
- background:#fff!important;border:1px solid #d7e0e9!important;
-}
-.month-kpis.nav-kpis .kpi label{display:block!important;white-space:normal!important;font-size:10px!important;line-height:1.25!important;overflow:visible!important}
-.month-kpis.nav-kpis .kpi strong{display:block!important;font-size:15px!important;white-space:normal!important;overflow-wrap:anywhere!important}
-.month-kpis.nav-kpis .kpi input{width:100%!important;min-width:0!important;height:38px!important;font-size:16px!important}
-@media(max-width:700px){
- .month-kpis.nav-kpis{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:5px!important;margin:7px 0 10px!important;padding:0 8px!important}
- .month-kpis.nav-kpis .kpi{padding:7px 5px!important}
- .month-kpis.nav-kpis .kpi label{font-size:9px!important}
- .month-kpis.nav-kpis .kpi strong{font-size:13px!important}
- #orderFilter #print{display:flex!important}
-}
-@media print{
- .month-kpis.nav-kpis{display:none!important}
-}
-</style></body></html>
+</script></body></html>
 <style id="iphone-v7-final">
 @media screen and (max-width:700px){
  #orderFilter .filter-controls{
