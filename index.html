@@ -1711,6 +1711,30 @@ section#annualView .stats .stat strong{color:#526f9f!important}
  .backup-actions{display:flex;gap:6px;width:100%}
  .backup-actions .btn{flex:1;min-height:42px;padding:8px 10px;font-size:13px}
 }
+
+/* iPhone V8: responsive menu and compact order columns */
+@media(max-width:800px){
+ html,body{max-width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%}
+ #nav.nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important;padding:9px!important;overflow:visible!important;align-items:stretch!important}
+ #nav.nav>button,#nav.nav>.nav-field{min-width:0!important;width:100%!important;max-width:100%!important;margin:0!important;box-sizing:border-box!important}
+ #nav.nav>button{white-space:normal!important;overflow-wrap:anywhere!important;min-height:43px!important;padding:7px 5px!important;font-size:12px!important;line-height:1.25!important}
+ #nav.nav>.nav-field{display:flex!important;gap:5px!important;align-items:center!important;justify-content:space-between!important;font-size:12px!important}
+ #nav.nav>.nav-field select{min-width:0!important;width:70%!important;max-width:100%!important;height:42px!important;font-size:14px!important;padding:4px!important}
+ #nav.nav>.nav-kpis{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;width:100%!important;min-width:0!important;gap:6px!important;position:static!important;transform:none!important;margin:0!important;padding:0!important;overflow:visible!important}
+ #nav.nav>.nav-kpis>.kpi{min-width:0!important;width:auto!important;max-width:100%!important;padding:7px 5px!important;min-height:70px!important;overflow:hidden!important;white-space:normal!important}
+ #nav.nav>.nav-kpis>.kpi label{display:block!important;font-size:10px!important;line-height:1.25!important;white-space:normal!important;overflow-wrap:anywhere!important}
+ #nav.nav>.nav-kpis>.kpi strong{font-size:14px!important;overflow-wrap:anywhere!important}
+ #nav.nav>.nav-kpis>.kpi input{width:100%!important;min-width:0!important;font-size:16px!important}
+ #monthTable{table-layout:auto!important}
+ #monthTable th:nth-child(1),#monthTable td:nth-child(1){min-width:45px!important;width:45px!important;max-width:45px!important}
+ #monthTable th:nth-child(2),#monthTable td:nth-child(2){min-width:112px!important;width:112px!important;max-width:112px!important}
+ #monthTable td:nth-child(2) input{width:100%!important;min-width:0!important;padding:7px 2px!important;font-size:13px!important;text-align:center!important}
+ #monthTable th:nth-child(3),#monthTable td:nth-child(3){min-width:190px!important;width:210px!important}
+ #monthTable td:nth-child(3) input{width:100%!important;min-width:0!important;font-size:16px!important;white-space:normal!important}
+ #monthTable td{padding:4px!important}
+}
+#productChoices{overscroll-behavior:contain}
+#productChoices button{touch-action:manipulation}
 </style><style>
 
 /* DANH MUC HANG - dong bo bang nhap don hang, gon va de doc */
@@ -1976,6 +2000,7 @@ function renderMonth(){
    inp.setAttribute('spellcheck','false');
    inp.oninput=()=>showProductChoices(inp);
    inp.onfocus=()=>showProductChoices(inp);
+   if(window.matchMedia("(max-width:800px)").matches){inp.readOnly=true;inp.setAttribute("inputmode","none");inp.style.cursor="pointer";inp.onclick=()=>showProductChoices(inp);}
    inp.onblur=()=>setTimeout(()=>hideProductChoices(),180);
    inp.onkeydown=e=>{
     if(e.key==='Enter'){
@@ -2003,7 +2028,7 @@ function renderMonth(){
  });
  body.querySelectorAll('[data-del]').forEach(b=>b.onclick=()=>{m.rows.splice(+b.dataset.del,1);renderMonth();saveData()});
  $('empty').classList.add('hide');
- const addBtn=$('addOrderRow');if(addBtn)addBtn.onclick=()=>{m.rows.push(blankOrderRow(localDateISO()));saveData();renderMonth();const next=$('monthBody').querySelector(`input[data-i="${m.rows.length-1}"][data-k="name"]`);const wrap=document.querySelector('#monthView .table-wrap');if(wrap)wrap.scrollLeft=0;if(next){next.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>next.focus(),250);}};
+ const addBtn=$('addOrderRow');if(addBtn)addBtn.onclick=()=>{m.rows.push(blankOrderRow(localDateISO()));saveData();renderMonth();const next=$('monthBody').querySelector(`input[data-i="${m.rows.length-1}"][data-k="name"]`);const wrap=document.querySelector('#monthView .table-wrap');if(wrap)wrap.scrollLeft=0;if(next){next.scrollIntoView({behavior:'smooth',block:'center'});if(!window.matchMedia('(max-width:800px)').matches)setTimeout(()=>next.focus(),250);}};
  renderMonthStats();buildNav();
 }
 
@@ -2015,8 +2040,17 @@ function showProductChoices(inp){
  if(!matches.length)return;
  const box=document.createElement('div');box.id='productChoices';
  box.style.cssText='position:fixed;z-index:999999;background:#fff;border:1px solid #9aaac0;border-radius:9px;box-shadow:0 8px 24px #172b4d30;max-height:45vh;overflow:auto;-webkit-overflow-scrolling:touch;';
- const r=inp.getBoundingClientRect();box.style.left=Math.max(8,Math.min(r.left,window.innerWidth-300))+'px';box.style.top=Math.min(r.bottom,window.innerHeight-120)+'px';box.style.width=Math.min(Math.max(r.width,260),window.innerWidth-16)+'px';
+ const r=inp.getBoundingClientRect();
+ if(window.matchMedia('(max-width:800px)').matches){
+   box.style.left='12px';box.style.right='12px';box.style.width='auto';
+   box.style.top='max(70px, env(safe-area-inset-top))';box.style.bottom='max(20px, env(safe-area-inset-bottom))';box.style.maxHeight='none';
+   box.style.paddingTop='46px';
+
+ }else{box.style.left=Math.max(8,Math.min(r.left,window.innerWidth-300))+'px';box.style.top=Math.min(r.bottom,window.innerHeight-120)+'px';box.style.width=Math.min(Math.max(r.width,260),window.innerWidth-16)+'px';}
  box.innerHTML=matches.map((p,i)=>`<button type="button" data-product-index="${catalogProducts.indexOf(p)}" style="display:block;width:100%;padding:11px 12px;text-align:left;border:0;border-bottom:1px solid #edf0f4;background:#fff;color:#25364a;font-size:16px;line-height:1.35;white-space:normal"><strong>${esc(p.name||'')}</strong><br><small style="color:#64748b">Mã: ${esc(p.code||'')} · ${esc(p.unit||'')} · ${money(p.price||0)}</small></button>`).join('');
+ if(window.matchMedia('(max-width:800px)').matches){
+   const close=document.createElement('button');close.type='button';close.textContent='✕ Đóng danh sách';close.style.cssText='position:absolute;top:0;right:0;left:0;width:100%;height:44px;background:#eaf0f9;border:0;color:#23456a;font-size:15px;font-weight:700';close.onclick=hideProductChoices;box.appendChild(close);
+ }
  box.querySelectorAll('button').forEach(b=>{
   b.addEventListener('pointerdown',e=>{e.preventDefault();const p=catalogProducts[+b.dataset.productIndex];chooseProductForRow(+inp.dataset.i,p);},{passive:false});
  });
@@ -2030,7 +2064,7 @@ function chooseProductForRow(rowIndex,p){
  if(rowIndex===months[current].rows.length-1)months[current].rows.push(blankOrderRow(localDateISO()));
  saveData();renderMonth();
  const next=bodyAfterRenderInput(rowIndex+1);
- if(next){next.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>next.focus(),220);}
+ if(next && !window.matchMedia('(max-width:800px)').matches){next.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>next.focus(),220);}
 }
 function bodyAfterRenderInput(rowIndex){return $('monthBody').querySelector(`input[data-i="${rowIndex}"][data-k="orderDate"]`)}
 function updateRow(i,k,v){let r=months[current].rows[i];r[k]=['support','qty','price','capacity'].includes(k)?parseOrderNumber(v,k):v;if(k==='name'){let p=catalogProducts.find(x=>x.name===v);if(p){r.code=p.code;r.unit=p.unit;r.price=p.price;r.capacity=p.capacity}}saveData();renderMonth()}
