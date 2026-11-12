@@ -2565,7 +2565,7 @@ function renderMonth(){
    inp.oninput=()=>showProductChoices(inp);
    inp.onfocus=()=>showProductChoices(inp);
    if(window.matchMedia("(max-width:800px)").matches){inp.readOnly=true;inp.setAttribute("inputmode","none");inp.style.cursor="pointer";inp.onclick=()=>showProductChoices(inp);}
-   inp.onblur=()=>setTimeout(()=>hideProductChoices(),180);
+   inp.onblur=()=>setTimeout(()=>{const active=document.activeElement;const popup=document.getElementById('productChoices');if(!popup||!popup.contains(active))hideProductChoices();},250);
    inp.onkeydown=e=>{
     if(e.key==='Enter'){
      e.preventDefault();
@@ -2614,7 +2614,7 @@ function showProductChoices(inp){
  box.setAttribute('aria-label','Chọn mặt hàng');
  box.style.cssText=isPhone
   ? 'position:fixed;inset:8px 8px 8px;z-index:2147483647;background:#f7f9fc;border:1px solid #9aaac0;border-radius:14px;box-shadow:0 8px 28px #172b4d45;display:flex;flex-direction:column;overflow:hidden;min-height:0;height:auto;'
-  : 'position:fixed;z-index:2147483647;background:#f7f9fc;border:1px solid #9aaac0;border-radius:12px;box-shadow:0 8px 24px #172b4d30;left:'+Math.max(8,Math.min(r.left,window.innerWidth-340))+'px;top:'+Math.min(r.bottom,window.innerHeight-140)+'px;width:'+Math.min(Math.max(r.width,300),window.innerWidth-16)+'px;height:min(68vh,620px);display:flex;flex-direction:column;overflow:hidden;';
+  : 'position:fixed;z-index:2147483647;background:#f7f9fc;border:1px solid #9aaac0;border-radius:12px;box-shadow:0 8px 24px #172b4d30;left:'+Math.max(8,Math.min(r.left,window.innerWidth-340))+'px;top:'+Math.max(8,Math.min(r.bottom,window.innerHeight-Math.min(window.innerHeight*0.82,740)-8))+'px;width:'+Math.min(Math.max(r.width,300),window.innerWidth-16)+'px;height:min(82vh,740px);display:flex;flex-direction:column;overflow:hidden;';
  const head=document.createElement('div');
  head.style.cssText='flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;background:linear-gradient(90deg,#718bc1,#8298c9);color:#fff;border-bottom:1px solid #607bb4;';
  const title=document.createElement('strong');

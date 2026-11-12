@@ -1,0 +1,1995 @@
+{
+  "format": "HABECO_OANH_SON_BACKUP",
+  "version": 1,
+  "exportedAt": "2026-11-12T03:11:33.930Z",
+  "currentYear": 2026,
+  "currentMonth": 10,
+  "byYear": {
+    "2025": [
+      {
+        "month": 1,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 2,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 3,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 4,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 5,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 6,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 7,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 8,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 9,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 10,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 11,
+        "plan": 0,
+        "rows": [
+          {
+            "orderDate": "2026-11-10",
+            "name": "",
+            "code": "",
+            "unit": "",
+            "support": 0,
+            "qty": 0,
+            "price": 0,
+            "capacity": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "plan": 0,
+        "rows": []
+      }
+    ],
+    "2026": [
+      {
+        "month": 1,
+        "plan": 145311,
+        "rows": [
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 207,
+            "qty": 63,
+            "price": 163804,
+            "capacity": 9,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 339,
+            "qty": 6481,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 53,
+            "qty": 47,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 4,
+            "qty": 100,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 56,
+            "qty": 34,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 2,
+            "qty": 0,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml ĐB",
+            "code": "TP505",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 138,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 624,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek KM",
+            "code": "11000241",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 624,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml ĐB",
+            "code": "TP505",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 280,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 135,
+            "qty": 3465,
+            "price": 163804,
+            "capacity": 9,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 57,
+            "qty": 7943,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          }
+        ]
+      },
+      {
+        "month": 2,
+        "plan": 86991,
+        "rows": [
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 400,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 884,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 52,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 70,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 200,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1100,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 350,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 4320,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 3200,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 3,
+        "plan": 137232,
+        "rows": [
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 25,
+            "qty": 1223,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 40,
+            "qty": 7360,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1248,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 104,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 2,
+            "qty": 278,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 3,
+            "qty": 597,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 29,
+            "qty": 71,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 67,
+            "qty": 428,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 21,
+            "qty": 179,
+            "price": 65782,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 210,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1600,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 4320,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 4,
+        "plan": 228553,
+        "rows": [
+          {
+            "name": "Bia lon vàng Sleek 330ml KM",
+            "code": "11000388",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 832,
+            "price": 262999,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 39,
+            "qty": 961,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 17,
+            "qty": 403,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 6400,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 3200,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1000,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 3600,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng Sleek 330ml KM",
+            "code": "11000388",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 262999,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 832,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 2160,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 4800,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng Sleek 330ml KM",
+            "code": "11000388",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1560,
+            "price": 262999,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 104,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 420,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 5,
+        "plan": 252201,
+        "rows": [
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 346,
+            "qty": 54,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 62,
+            "qty": 38,
+            "price": 65782,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 5,
+            "qty": 95,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 20,
+            "qty": 25,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 58,
+            "qty": 774,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 2160,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 2160,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 4800,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 420,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 500,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 250,
+            "price": 65782,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 4800,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek KM",
+            "code": "11000241",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 936,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 104,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 420,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 10080,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 6,
+        "plan": 282953,
+        "rows": [
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 171,
+            "qty": 29,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 25,
+            "qty": 25,
+            "price": 65782,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 17,
+            "qty": 83,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 3,
+            "qty": 42,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 9,
+            "qty": 61,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 2,
+            "qty": 0,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 210,
+            "qty": 828,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 7200,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek KM",
+            "code": "11000241",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 700,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 350,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 200,
+            "price": 65782,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 3600,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 4800,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 4320,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 8000,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek KM",
+            "code": "11000241",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1144,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 104,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 280,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 7,
+        "plan": 256875,
+        "rows": [
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 37,
+            "qty": 899,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 490,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 7200,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 81,
+            "qty": 1583,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 490,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 5,
+            "qty": 245,
+            "price": 65782,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 28,
+            "qty": 372,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 89,
+            "qty": 12711,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 107,
+            "qty": 6373,
+            "price": 163804,
+            "capacity": 9,
+            "note": "👉 Đã ghép hỗ trợ"
+          }
+        ]
+      },
+      {
+        "month": 8,
+        "plan": 205000,
+        "rows": [
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 188,
+            "qty": 12,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 4,
+            "qty": 416,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 23,
+            "qty": 807,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 5040,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 4800,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 420,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1040,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 9,
+        "plan": 240000,
+        "rows": [
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 39,
+            "qty": 585,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 39,
+            "qty": 381,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 3,
+            "qty": 87,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 6,
+            "qty": 194,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng Sleek 330ml",
+            "code": "11000386",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1040,
+            "price": 262999,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 624,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 490,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 300,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 624,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 237,
+            "qty": 123,
+            "price": 163804,
+            "capacity": 9,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 102,
+            "qty": 98,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 62,
+            "qty": 38,
+            "price": 65782,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 21,
+            "qty": 79,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 7,
+            "qty": 63,
+            "price": 346995,
+            "capacity": 12,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 13,
+            "qty": 0,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 16,
+            "qty": 179,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": "👉 Đã ghép hỗ trợ"
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 16000,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 5040,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 3328,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 10,
+        "plan": 159952,
+        "rows": [
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 2200,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml",
+            "code": "TP504",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 490,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml",
+            "code": "TP205",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 300,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml ĐB",
+            "code": "TP217",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1600,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 720,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml ĐB",
+            "code": "TP217",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1600,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 3600,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 500,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml KM",
+            "code": "TP201",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 400,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml ĐB",
+            "code": "TP217",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1100,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 72,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml KM",
+            "code": "TP206",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 300,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Trúc Bạch lon Sleek",
+            "code": "TP302",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 104,
+            "price": 413996,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml ĐB",
+            "code": "TP505",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 320,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia HN chai 1890",
+            "code": "408",
+            "unit": "Két",
+            "support": 0,
+            "qty": 90,
+            "price": 159192,
+            "capacity": 6.6,
+            "note": ""
+          },
+          {
+            "name": "Uniaqua 500ml",
+            "code": "550",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 100,
+            "price": 65782,
+            "capacity": 12,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 1440,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "name": "Bia lon trắng Sleek",
+            "code": "TP308",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon vàng 330ml",
+            "code": "TP200",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1600,
+            "price": 259501,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia lon xanh 330ml KM",
+            "code": "TP206",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 600,
+            "price": 245003,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "name": "Bia hơi lon KMC 500ml ĐB",
+            "code": "TP505",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 700,
+            "price": 346995,
+            "capacity": 12,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 11,
+        "plan": 100000,
+        "rows": [
+          {
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 720,
+            "price": 163804,
+            "capacity": 9,
+            "note": "",
+            "orderDate": "2026-11-02"
+          },
+          {
+            "orderDate": "2026-11-05",
+            "name": "Bia lon vàng 330ml KM",
+            "code": "TP201",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1600,
+            "price": 262493,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "orderDate": "2026-11-05",
+            "name": "Bia lon vàng 330ml ĐB",
+            "code": "TP217",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 6400,
+            "price": 262493,
+            "capacity": 7.92,
+            "note": ""
+          },
+          {
+            "orderDate": "2026-11-09",
+            "name": "Bia chai 450ml",
+            "code": "405",
+            "unit": "Két",
+            "support": 0,
+            "qty": 3600,
+            "price": 163804,
+            "capacity": 9,
+            "note": ""
+          },
+          {
+            "orderDate": "2026-11-10",
+            "name": "Bia lon trắng Sleek KM",
+            "code": "11000241",
+            "unit": "Thùng",
+            "support": 0,
+            "qty": 1664,
+            "price": 270211,
+            "capacity": 7.92,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "plan": 0,
+        "rows": []
+      }
+    ],
+    "2027": [
+      {
+        "month": 1,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 2,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 3,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 4,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 5,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 6,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 7,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 8,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 9,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 10,
+        "plan": 0,
+        "rows": []
+      },
+      {
+        "month": 11,
+        "plan": 0,
+        "rows": [
+          {
+            "orderDate": "2026-11-10",
+            "name": "",
+            "code": "",
+            "unit": "",
+            "support": 0,
+            "qty": 0,
+            "price": 0,
+            "capacity": 0,
+            "note": ""
+          }
+        ]
+      },
+      {
+        "month": 12,
+        "plan": 0,
+        "rows": []
+      }
+    ]
+  },
+  "products": [
+    {
+      "stt": 1,
+      "code": "405",
+      "name": "Bia chai 450ml",
+      "unit": "Két",
+      "price": 163804,
+      "capacity": 9
+    },
+    {
+      "stt": 2,
+      "code": "405 KM",
+      "name": "Bia chai 450ml bật nắp",
+      "unit": "Két",
+      "price": 163804,
+      "capacity": 9
+    },
+    {
+      "stt": 3,
+      "code": "TP200",
+      "name": "Bia lon vàng 330ml",
+      "unit": "Thùng",
+      "price": 262493,
+      "capacity": 7.92
+    },
+    {
+      "stt": 4,
+      "code": "TP201",
+      "name": "Bia lon vàng 330ml KM",
+      "unit": "Thùng",
+      "price": 262493,
+      "capacity": 7.92
+    },
+    {
+      "stt": 5,
+      "code": "TP217",
+      "name": "Bia lon vàng 330ml ĐB",
+      "unit": "Thùng",
+      "price": 262493,
+      "capacity": 7.92
+    },
+    {
+      "stt": 6,
+      "code": "11000386",
+      "name": "Bia lon vàng Sleek 330ml",
+      "unit": "Thùng",
+      "price": 265001,
+      "capacity": 7.92
+    },
+    {
+      "stt": 7,
+      "code": "11000388",
+      "name": "Bia lon vàng Sleek 330ml KM",
+      "unit": "Thùng",
+      "price": 265001,
+      "capacity": 7.92
+    },
+    {
+      "stt": 8,
+      "code": "TP205",
+      "name": "Bia lon xanh 330ml",
+      "unit": "Thùng",
+      "price": 247995,
+      "capacity": 7.92
+    },
+    {
+      "stt": 9,
+      "code": "TP206",
+      "name": "Bia lon xanh 330ml KM",
+      "unit": "Thùng",
+      "price": 247995,
+      "capacity": 7.92
+    },
+    {
+      "stt": 10,
+      "code": "TP219",
+      "name": "Bia lon xanh tết 330ml ĐB",
+      "unit": "Thùng",
+      "price": 247995,
+      "capacity": 7.92
+    },
+    {
+      "stt": 11,
+      "code": "11000339",
+      "name": "Bia chai xanh 330ml",
+      "unit": "Két",
+      "price": 238260,
+      "capacity": 6.6
+    },
+    {
+      "stt": 12,
+      "code": "332",
+      "name": "Bia chai nhỏ 330ml",
+      "unit": "Két",
+      "price": 221947,
+      "capacity": 6.6
+    },
+    {
+      "stt": 13,
+      "code": "TP208",
+      "name": "Bia lon trắng",
+      "unit": "Thùng",
+      "price": 274000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 14,
+      "code": "TP211",
+      "name": "Bia lon trắng tết",
+      "unit": "Thùng",
+      "price": 274000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 15,
+      "code": "TP308",
+      "name": "Bia lon trắng Sleek",
+      "unit": "Thùng",
+      "price": 274000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 16,
+      "code": "11000241",
+      "name": "Bia lon trắng Sleek KM",
+      "unit": "Thùng",
+      "price": 274000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 17,
+      "code": "209",
+      "name": "Bia lon trắng xách 6 lon",
+      "unit": "Thùng",
+      "price": 0,
+      "capacity": 7.92
+    },
+    {
+      "stt": 18,
+      "code": "TB333",
+      "name": "Trúc Bạch chai",
+      "unit": "Két",
+      "price": 377300,
+      "capacity": 7.92
+    },
+    {
+      "stt": 19,
+      "code": "TP202",
+      "name": "Trúc Bạch lon",
+      "unit": "Thùng",
+      "price": 419991,
+      "capacity": 7.92
+    },
+    {
+      "stt": 20,
+      "code": "TP215",
+      "name": "Trúc Bạch lon tết",
+      "unit": "Thùng",
+      "price": 419991,
+      "capacity": 7.92
+    },
+    {
+      "stt": 21,
+      "code": "TP302",
+      "name": "Trúc Bạch lon Sleek",
+      "unit": "Thùng",
+      "price": 419991,
+      "capacity": 7.92
+    },
+    {
+      "stt": 22,
+      "code": "210",
+      "name": "Trúc Bạch lon 330 xách 6",
+      "unit": "Thùng",
+      "price": 0,
+      "capacity": 7.92
+    },
+    {
+      "stt": 23,
+      "code": "TP203",
+      "name": "Trúc Bạch lon 500 xách 6",
+      "unit": "Thùng",
+      "price": 143594,
+      "capacity": 0
+    },
+    {
+      "stt": 24,
+      "code": "TP204",
+      "name": "Trúc Bạch lon 500 xách 12",
+      "unit": "Thùng",
+      "price": 287188,
+      "capacity": 0
+    },
+    {
+      "stt": 25,
+      "code": "355",
+      "name": "Bia Bold 355ml",
+      "unit": "Két",
+      "price": 226864,
+      "capacity": 7.1
+    },
+    {
+      "stt": 26,
+      "code": "TP212",
+      "name": "Bia Bold lon 330ml",
+      "unit": "Thùng",
+      "price": 285000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 27,
+      "code": "TP312",
+      "name": "Bia Bold lon Sleek 330ml",
+      "unit": "Thùng",
+      "price": 299244,
+      "capacity": 7.92
+    },
+    {
+      "stt": 28,
+      "code": "501",
+      "name": "Bia Light 355ml",
+      "unit": "Két",
+      "price": 267894,
+      "capacity": 7.1
+    },
+    {
+      "stt": 29,
+      "code": "TP216",
+      "name": "Bia Light lon 330ml",
+      "unit": "Thùng",
+      "price": 320000,
+      "capacity": 7.92
+    },
+    {
+      "stt": 30,
+      "code": "TP316",
+      "name": "Bia Light lon Sleek 330ml",
+      "unit": "Thùng",
+      "price": 351989,
+      "capacity": 7.92
+    },
+    {
+      "stt": 31,
+      "code": "408",
+      "name": "Bia HN chai 1890",
+      "unit": "Két",
+      "price": 159192,
+      "capacity": 6.6
+    },
+    {
+      "stt": 32,
+      "code": "TP506",
+      "name": "Bia hơi lon 500ml (12 lon)",
+      "unit": "Thùng",
+      "price": 171710,
+      "capacity": 6
+    },
+    {
+      "stt": 33,
+      "code": "TP504",
+      "name": "Bia hơi lon KMC 500ml",
+      "unit": "Thùng",
+      "price": 350999,
+      "capacity": 12
+    },
+    {
+      "stt": 34,
+      "code": "TP505",
+      "name": "Bia hơi lon KMC 500ml ĐB",
+      "unit": "Thùng",
+      "price": 350999,
+      "capacity": 12
+    },
+    {
+      "stt": 35,
+      "code": "350",
+      "name": "Uniaqua 350ml",
+      "unit": "Thùng",
+      "price": 57000,
+      "capacity": 8.4
+    },
+    {
+      "stt": 36,
+      "code": "550",
+      "name": "Uniaqua 500ml",
+      "unit": "Thùng",
+      "price": 65782,
+      "capacity": 12
+    }
+  ]
+}
