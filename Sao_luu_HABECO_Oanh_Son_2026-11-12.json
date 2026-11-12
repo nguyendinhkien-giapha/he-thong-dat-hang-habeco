@@ -1,7 +1,7 @@
 {
   "format": "HABECO_OANH_SON_BACKUP",
   "version": 1,
-  "exportedAt": "2026-11-12T03:11:33.930Z",
+  "exportedAt": "2026-11-12T04:36:54.594Z",
   "currentYear": 2026,
   "currentMonth": 10,
   "byYear": {
@@ -1562,7 +1562,7 @@
       },
       {
         "month": 11,
-        "plan": 100000,
+        "plan": 113205,
         "rows": [
           {
             "name": "Bia chai 450ml",
@@ -1615,7 +1615,7 @@
             "unit": "Thùng",
             "support": 0,
             "qty": 1664,
-            "price": 270211,
+            "price": 274000,
             "capacity": 7.92,
             "note": ""
           }
